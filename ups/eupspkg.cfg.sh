@@ -3,5 +3,5 @@ TAP_PACKAGE=1
 
 build()
 {
-    python setup.py --without-libyaml build
+    CFLAGS=-I${LIBYAML_DIR}/include python setup.py --with-libyaml build
 }
